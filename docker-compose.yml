@@ -1,0 +1,18 @@
+version: '2'
+services:
+  pig:
+    build: ./pig
+    ports:
+     - "12345:12345"
+    volumes:
+     - /home/kambara/mp4:/mnt/mp4:ro
+    restart: always
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - /home/kambara/mp4:/usr/share/nginx/html/volume:ro
+    links:
+      - pig
+    restart: always

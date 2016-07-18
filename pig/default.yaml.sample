@@ -1,0 +1,6 @@
+---
+Pig Media Server:
+  hostname: "192.168.0.5"
+  path: "/mnt/mp4"
+  groonga: "/root/groonga"
+  user_data_path: "/root/userdata"
